@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom checkboxes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Custom checkboxes examples
+         that can be used in a real life project
+    -->
+    <form action="">
+        <h2>What are your hobbies?</h2>
+        <label for="item1" class="items">
+            <input type="checkbox" name="hobby" id="item1" value="dancing"  />
+            <span></span>
+            Dancing
+        </label>
+        <label for="item2" class="items">
+            <input type="checkbox" name="hobby1" id="item2" value="singing"  />
+            <span></span>
+            Singing
+        </label>
+        <label for="item3" class="items">
+            <input type="checkbox" name="hobby2" id="item3" value="dancing" />
+            <span></span>
+            Coding
+        </label>
+        <label for="item4" class="items">
+            <input type="checkbox" name="hobby3" id="item4" value="playing game" />
+            <span></span>
+            Playing game
+        </label>
+        <label for="item5" class="items">
+            <input type="checkbox" name="hobby4" id="item5" value="swimming" />
+            <span></span>
+            Swimming
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    <script>
+        // All the label element on the page
+        const labels = Array.from(document.querySelectorAll("label"));
+
+        /* attaching an event to each label on the page. */
+        // Adding the checked class to the clicked label.
+        labels.forEach(label =>{
+            label.addEventListener("click", e =>{
+                e.target.classList.toggle("checked");
+            })
+        })
+    </script>
+</body>
+</html>
